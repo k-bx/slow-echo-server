@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: aa6269667cd9df0a3dc331cad963619bb480aa9959dc1bab55b96959e1cb7e36
+-- hash: a51bb68da682cba8525dbe3b62afb4e821e1e96a3285df2ea70cb674fb3f2542
 
 name:           slow
 version:        0.1.0.0
@@ -35,6 +35,8 @@ library
   build-depends:
       base >=4.7 && <5
     , scotty
+    , string-class
+    , wai
   default-language: Haskell2010
 
 executable slow-exe
@@ -48,6 +50,8 @@ executable slow-exe
       base >=4.7 && <5
     , scotty
     , slow
+    , string-class
+    , wai
   default-language: Haskell2010
 
 test-suite slow-test
@@ -62,4 +66,6 @@ test-suite slow-test
       base >=4.7 && <5
     , scotty
     , slow
+    , string-class
+    , wai
   default-language: Haskell2010
